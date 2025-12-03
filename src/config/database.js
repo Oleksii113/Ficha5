@@ -13,5 +13,10 @@ export async function connectToDataBase() {
         await mongoose.connect(uri, {
             dbName,
         });
+        console.log("Ligação ao mongo foi feita");
+    }
+    catch (error) {
+        console.log("Erro ao ligar á base de dados", error);
+        throw error;
     }
 }
