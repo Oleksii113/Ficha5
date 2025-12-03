@@ -8,4 +8,10 @@ export async function connectToDataBase() {
         );
     }
     const dbName = process.env.MONGODB_DB_NAME || "ficha5_conspirações";
+
+    try {
+        await mongoose.connect(uri, {
+            dbName,
+        });
+    }
 }
