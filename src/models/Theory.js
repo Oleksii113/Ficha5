@@ -20,3 +20,26 @@ const commentSchema = new Schema({
         _id: false,
     }
 );
+
+
+const theorySchema = new Schema(
+    {
+    title: {
+        type: String,
+        require: true,
+        trim: true,
+        minlength: 2,
+    },
+    summary: {
+        type: String,
+        require: true,
+        trim: true,
+        minlength: 2,
+    },
+    content: {
+        type: String,
+        require: true,
+        trim: true,
+        minlength: 2,
+    },
+});
