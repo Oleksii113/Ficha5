@@ -49,9 +49,9 @@ const theorySchema = new Schema(
         },
         tags: [ 
             {
-            type: String,
-            trim: true,
-            lowercase: true,
+                type: String,
+                trim: true,
+                lowercase: true,
             },
         ],
         comments: [commentSchema],
