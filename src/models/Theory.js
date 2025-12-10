@@ -40,6 +40,6 @@ const theorySchema = new Schema(
         type: String,
         require: true,
         trim: true,
-        minlength: 2,
+        minlength: 20,
     },
 });
