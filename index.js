@@ -1,6 +1,6 @@
-// import app from ".app/js";
+import app from "./src/app.js";
 import "dotenv/config";
-import { connectToDataBase } from "./src/config/database";
+import { connectToDataBase } from "./src/config/database.js";
 import { application } from "express";
 
 const PORT = process.env.PORT || 3000;

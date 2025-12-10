@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 export async function connectToDataBase() {
-    const uri = process.env.MONGODB_URL;
+    const uri = process.env.MONGODB_URI;
 
     if (!uri) {
         throw new Error(
