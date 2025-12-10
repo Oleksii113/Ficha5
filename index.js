@@ -13,7 +13,7 @@ async function startServer() {
         });
 
     } catch (error) {
-        console.error("ERro Critico ao arrancar o servidor", error);
+        console.error("Erro Critico ao arrancar o servidor", error);
         process.exit(1);
     }
 }
