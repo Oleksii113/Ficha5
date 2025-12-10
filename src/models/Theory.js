@@ -23,23 +23,43 @@ const commentSchema = new Schema({
 
 
 const theorySchema = new Schema(
+        {
+        title: {
+            type: String,
+            require: true,
+            trim: true,
+            minlength: 2,
+        },
+        summary: {
+            type: String,
+            require: true,
+            trim: true,
+            minlength: 2,
+        },
+        content: {
+            type: String,
+            require: true,
+            trim: true,
+            minlength: 20,
+        },
+        complexityLevel: {
+            type: String,
+            enum: ["low", "medium", "high"],
+            default: "medium",
+        },
+        tags: [ 
+            {
+            type: String,
+            trim: true,
+            lowercase: true,
+            },
+        ],
+        comments: [commentSchema],
+    },
     {
-    title: {
-        type: String,
-        require: true,
-        trim: true,
-        minlength: 2,
-    },
-    summary: {
-        type: String,
-        require: true,
-        trim: true,
-        minlength: 2,
-    },
-    content: {
-        type: String,
-        require: true,
-        trim: true,
-        minlength: 20,
-    },
-});
+        timestamps: true,
+    }
+);
+
+const Theory = mongoose.model("Theory", theorySchema);
+export default Theory;
